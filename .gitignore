@@ -1,0 +1,28 @@
+bin/
+obj/
+publish/
+.vs/
+*.user
+
+# Local configuration and credentials
+/appsettings.json
+/appsettings.*.json
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.pem
+*.key
+*.crt
+*.cer
+*.jks
+*.keystore
+id_rsa
+id_ed25519
+
+# Local diagnostic reports
+/INFORME_AJUSTE_CONEXIONES.md
+/VERIFICACION_CONECTIVIDAD.md
+/RESUMEN_EJECUTIVO.txt
+/reporte-conectividad-*.txt
