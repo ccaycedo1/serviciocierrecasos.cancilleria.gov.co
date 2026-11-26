@@ -11,6 +11,7 @@ public class ActualizarEstadosPagosJob : IActualizarEstadosPagosJob
 {
     private readonly IPagoService _pagoService;
     private readonly IRecaudoService _recaudoService;
+    private readonly IPagoRetransmitidoService _pagoRetransmitidoService;
     private readonly ILogger<ActualizarEstadosPagosJob> _logger;
     private const int CARACTERES_A_ELIMINAR = 7;
     private const int ESTADO_PAGADO = 2;
@@ -19,10 +20,12 @@ public class ActualizarEstadosPagosJob : IActualizarEstadosPagosJob
     public ActualizarEstadosPagosJob(
         IPagoService pagoService,
         IRecaudoService recaudoService,
+        IPagoRetransmitidoService pagoRetransmitidoService,
         ILogger<ActualizarEstadosPagosJob> logger)
     {
         _pagoService = pagoService;
         _recaudoService = recaudoService;
+        _pagoRetransmitidoService = pagoRetransmitidoService;
         _logger = logger;
     }
 
@@ -117,10 +120,13 @@ public class ActualizarEstadosPagosJob : IActualizarEstadosPagosJob
 
                     // PASO 4: Validar estado del recaudo
                     _logger.LogDebug("  ├─ PASO 4: Validando estado del recaudo");
-                    _logger.LogDebug("    └─ Estado Recaudo: {Estado} (Esperado: {Esperado})", recaudo.CodEstadoRecaudo, ESTADO_PAGADO);
+                    _logger.LogDebug("    └─ Estado Recaudo: {Estado}", recaudo.CodEstadoRecaudo);
 
                     if (recaudo.CodEstadoRecaudo == ESTADO_PAGADO)
                     {
+                        // FLUJO ACTUAL: codEstadoRecaudo = 2 → Cierre de registro
+                        _logger.LogDebug("  ├─ ℹ️  Estado es PAGADO (2)");
+                        
                         // PASO 5: Actualizar estado del pago
                         _logger.LogDebug("  ├─ PASO 5: Actualizando estado del pago");
                         bool actualizado = await _pagoService.ActualizarEstadoPagoAsync(pago.Id);
@@ -145,8 +151,9 @@ public class ActualizarEstadosPagosJob : IActualizarEstadosPagosJob
                     }
                     else
                     {
-                        _logger.LogDebug("  ├─ ℹ️  Recaudo no está en estado pagado");
-                        _logger.LogDebug("  └─ RESULTADO: No Aplica (Estado: {Estado})", recaudo.CodEstadoRecaudo);
+                        // NUEVO FLUJO: codEstadoRecaudo ≠ 2 → Actualizar PagosRetransmitidos
+                        _logger.LogDebug("  ├─ ℹ️  Estado NO es PAGADO. Ejecutando flujo alterno");
+                        await ProcesarFlujoAlternoAsync(pago, log);
                     }
                 }
                 catch (Exception ex)
@@ -169,6 +176,56 @@ public class ActualizarEstadosPagosJob : IActualizarEstadosPagosJob
             _logger.LogError(ex, "Excepción: {Excepcion}", ex.Message);
             log.Errores.Add($"Error crítico: {ex.Message}");
             return FinalizeLog(log);
+        }
+    }
+
+    private async Task ProcesarFlujoAlternoAsync(PagoNotificacion pago, JobExecutionLog log)
+    {
+        try
+        {
+            _logger.LogDebug("    ├─ FLUJO ALTERNO: Iniciando procesamiento");
+            _logger.LogDebug("    ├─ Referencia Pago: {Referencia}", pago.ReferenciaPago);
+            
+            // Buscar en PagosRetransmitidos usando referencia completa
+            var pagoRetransmitido = await _pagoRetransmitidoService.ObtenerPorReferenciaAsync(pago.ReferenciaPago);
+
+            if (pagoRetransmitido != null)
+            {
+                _logger.LogDebug("    ├─ ✅ Registro encontrado en PagosRetransmitidos");
+                
+                // Actualizar fechaRetransmision a NULL
+                bool actualizado = await _pagoRetransmitidoService.ActualizarFechaRetransmisionANullAsync(pago.ReferenciaPago);
+
+                if (actualizado)
+                {
+                    log.RegistrosActualizados++;
+                    _logger.LogInformation("    ├─ ✅ Registro de retransmisión actualizado exitosamente");
+                    _logger.LogInformation("    │  ├─ ID Registro: {IdRegistro}", pagoRetransmitido.Id);
+                    _logger.LogInformation("    │  ├─ Referencia: {Referencia}", pago.ReferenciaPago);
+                    _logger.LogInformation("    │  └─ FechaRetransmision: NULL");
+                    _logger.LogInformation("    └─ RESULTADO: Actualizado (Flujo Alterno)");
+                }
+                else
+                {
+                    string error = $"No se pudo actualizar el registro de retransmisión con referencia '{pago.ReferenciaPago}' (ID pago: {pago.Id})";
+                    _logger.LogWarning("    ├─ ⚠️  {Error}", error);
+                    log.Errores.Add(error);
+                    _logger.LogInformation("    └─ RESULTADO: No Actualizado (Flujo Alterno)");
+                }
+            }
+            else
+            {
+                _logger.LogDebug("    ├─ ℹ️  No existe registro en PagosRetransmitidos");
+                _logger.LogInformation("    └─ RESULTADO: Sin Coincidencia (Flujo Alterno)");
+            }
+        }
+        catch (Exception ex)
+        {
+            string error = $"Error en flujo alterno para pago con ID {pago.Id}: {ex.Message}";
+            _logger.LogError("    ├─ ❌ {Error}", error);
+            _logger.LogError("    └─ RESULTADO: Error (Flujo Alterno)");
+            _logger.LogError(ex, "       Stack Trace: {StackTrace}", ex.StackTrace);
+            log.Errores.Add(error);
         }
     }
 

@@ -15,6 +15,7 @@ if (WindowsServiceHelpers.IsWindowsService())
     serviceBuilder.Services.AddWindowsService(options => options.ServiceName = "ServicioCierreCasos");
     serviceBuilder.Services.AddScoped<IPagoService, PagoService>();
     serviceBuilder.Services.AddScoped<IRecaudoService, RecaudoService>();
+    serviceBuilder.Services.AddScoped<IPagoRetransmitidoService, PagoRetransmitidoService>();
     serviceBuilder.Services.AddScoped<IActualizarEstadosPagosJob, ActualizarEstadosPagosJob>();
     serviceBuilder.Services.AddHostedService<Worker>();
     await serviceBuilder.Build().RunAsync();
@@ -35,6 +36,7 @@ builder.Services.AddLogging(loggingBuilder =>
 // Registrar servicios
 builder.Services.AddScoped<IPagoService, PagoService>();
 builder.Services.AddScoped<IRecaudoService, RecaudoService>();
+builder.Services.AddScoped<IPagoRetransmitidoService, PagoRetransmitidoService>();
 builder.Services.AddScoped<IActualizarEstadosPagosJob, ActualizarEstadosPagosJob>();
 
 var host = builder.Build();
