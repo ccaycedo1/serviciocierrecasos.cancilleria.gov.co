@@ -1,0 +1,339 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║              INSTRUCCIONES DE EJECUCIÓN - PASO A PASO                     ║
+║            Servicio de Cierre de Casos - Versión 1.0                      ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ PARTE 1: PREPARACIÓN INICIAL                                              │
+└────────────────────────────────────────────────────────────────────────────┘
+
+PASO 1 - Instalar .NET SDK (si no lo tienes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Abre el navegador
+2. Ve a: https://dotnet.microsoft.com/download
+3. Descarga: .NET 10.0 (o compatible con tu proyecto)
+4. Ejecuta el instalador
+5. Reinicia tu computadora
+
+Para verificar que se instaló correctamente, abre CMD y escribe:
+  > dotnet --version
+  
+Deberías ver algo como: 10.0.0
+
+Si no funciona, reinicia CMD o tu computadora.
+
+
+PASO 2 - Verificar que el proyecto existe
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Abre el Explorador de Archivos
+2. Navega a: C:\ApostillaCcaycedo\ServicioCierreCasos
+3. Verifica que existan estos archivos:
+   
+   ✓ ServicioCierreCasos.csproj
+   ✓ Program.cs
+   ✓ appsettings.json
+   ✓ ejecutar.bat (nuevo - que acabamos de crear)
+   
+Si no están, el proyecto no está en la carpeta correcta.
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ PARTE 2: EJECUTAR EL PROGRAMA                                             │
+└────────────────────────────────────────────────────────────────────────────┘
+
+OPCIÓN A - Ejecución Completa (Recomendada)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Abre el Explorador de Archivos
+2. Navega a: C:\ApostillaCcaycedo\ServicioCierreCasos
+3. Busca el archivo: ejecutar.bat
+4. Haz DOBLE CLIC en ejecutar.bat
+5. Observa cómo se muestra cada paso
+
+Verás algo como esto:
+
+   ╔══════════════════════════════════════════════════════════════╗
+   ║   EJECUTAR SERVICIO CIERRE DE CASOS                         ║
+   ║   Script de Depuración - Versión 1.0                        ║
+   ╚══════════════════════════════════════════════════════════════╝
+   
+   [PASO 1] VALIDANDO ENTORNO
+   ✓ Proyecto encontrado: ServicioCierreCasos.csproj
+   
+   [PASO 2] VERIFICANDO .NET SDK
+   ✓ .NET SDK encontrado: 10.0.0
+   
+   ... (más pasos)
+   
+   [PASO 8] EJECUTANDO PROGRAMA
+   ════════════════════════════════════════════════════════════════
+   🚀 INICIANDO PROGRAMA
+   ════════════════════════════════════════════════════════════════
+
+
+OPCIÓN B - Ejecución desde Línea de Comandos
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Presiona: WIN + R
+2. Escribe: cmd
+3. Presiona: ENTER
+4. Escribe: cd C:\ApostillaCcaycedo\ServicioCierreCasos
+5. Escribe: ejecutar.bat
+6. Presiona: ENTER
+
+Verás la misma salida que en Opción A
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ PARTE 3: INTERPRETAR LOS RESULTADOS                                       │
+└────────────────────────────────────────────────────────────────────────────┘
+
+RESULTADO EXITOSO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Verás mensajes con ✓ (checkmarks):
+
+   ✓ Proyecto encontrado: ServicioCierreCasos.csproj
+   ✓ .NET SDK encontrado: 10.0.0
+   ✓ Dependencias restauradas correctamente
+   ✓ Compilación completada exitosamente
+   ✓ Ensamblado encontrado: ServicioCierreCasos.dll
+
+Y al final:
+
+   ════════════════════════════════════════════════════════════════
+   ✓ El programa se ejecutó exitosamente
+   Código de salida: 0
+   ════════════════════════════════════════════════════════════════
+
+→ Esto significa que TODO FUNCIONÓ CORRECTAMENTE
+
+
+RESULTADO CON ERROR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Verás mensajes con ✗ (cruces):
+
+   ✗ ERROR: No se encuentra ServicioCierreCasos.csproj
+   ✗ ERROR: .NET SDK no está instalado
+   ✗ ERROR: No se pudieron restaurar las dependencias
+
+Ve a la sección SOLUCIÓN DE PROBLEMAS (abajo)
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ PARTE 4: USAR LOS DIFERENTES SCRIPTS                                      │
+└────────────────────────────────────────────────────────────────────────────┘
+
+Según lo que necesites:
+
+📝 PRIMERA VEZ
+  → Ejecuta: ejecutar.bat
+  → Tiempo: 20-30 segundos
+  → Qué hace: Validar, compilar, ejecutar
+
+📝 DESPUÉS DE CAMBIAR CÓDIGO
+  → Ejecuta: ejecutar-rapido.bat
+  → Tiempo: 5-15 segundos
+  → Qué hace: Compilar y ejecutar
+
+📝 SOLO PRUEBA RÁPIDA (sin cambios)
+  → Ejecuta: ejecutar-directo.bat
+  → Tiempo: 2-5 segundos
+  → Qué hace: Solo ejecutar
+
+📝 CUANDO HAY PROBLEMAS
+  → Ejecuta: ejecutar-debug.bat
+  → Tiempo: 20-30 segundos
+  → Qué hace: Compilar con mucho detalle + ejecutar
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ PARTE 5: DEPURACIÓN - QUÉ SIGNIFICA CADA LÍNEA                            │
+└────────────────────────────────────────────────────────────────────────────┘
+
+PASO 1 - VALIDANDO ENTORNO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Directorio del script: C:\ApostillaCcaycedo\ServicioCierreCasos\
+  → El script encontró dónde está ubicado
+
+✓ Proyecto encontrado: ServicioCierreCasos.csproj
+  → Encontró el archivo del proyecto
+  → Si FALLA: Estás en la carpeta incorrecta
+
+
+PASO 2 - VERIFICANDO .NET SDK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ .NET SDK encontrado: 10.0.0
+  → .NET está instalado y disponible
+  → Si FALLA: Instala .NET desde https://dotnet.microsoft.com/download
+
+
+PASO 4 - RESTAURANDO DEPENDENCIAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Restaurando paquetes NuGet...
+  → Descarga dependencias (Dapper, Polly, etc.)
+  → Si FALLA: Revisa tu conexión a internet
+
+
+PASO 5 - COMPILANDO PROYECTO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Compilando en modo Debug...
+  → Convierte el código C# en un archivo .DLL
+  → Si FALLA: Hay un error en el código
+
+
+PASO 8 - EJECUTANDO PROGRAMA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Aquí es donde el programa realmente corre.
+
+Verás algo como:
+
+   ╔══════════════════════════════════════════╗
+   ║ PROGRAMA DE DEPURACIÓN                   ║
+   ║ Versión: 1.0                             ║
+   ║ Fecha: 2024-11-27 09:39:03               ║
+   ╚══════════════════════════════════════════╝
+   
+   📋 INFORMACIÓN DEL ENTORNO:
+     • Sistema Operativo: Microsoft Windows 10
+     • Versión .NET: .NET 10.0.0
+     • Directorio Actual: C:\ApostillaCcaycedo\ServicioCierreCasos
+   
+   🔗 CONFIGURACIÓN DE CONEXIONES:
+     • Base de Datos Pagos: tu-servidor
+   
+   ⚙️  PARÁMETROS DE EJECUCIÓN:
+     • Intervalo de Ejecución: 5 minutos
+     • Modo: Ejecución Única (Depuración)
+   
+   🚀 INICIANDO EJECUCIÓN DEL JOB...
+   ⏱️  Iniciando job en: 2024-11-27 09:39:04.123
+   ✅ Job finalizado en: 2024-11-27 09:39:15.456
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ PARTE 6: SOLUCIÓN DE PROBLEMAS                                            │
+└────────────────────────────────────────────────────────────────────────────┘
+
+PROBLEMA 1: "dotnet: comando no encontrado" o no funciona
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Qué significa:
+  → .NET SDK no está instalado en tu computadora
+
+Solución:
+  1. Ve a: https://dotnet.microsoft.com/download
+  2. Descarga .NET 10.0
+  3. Instala el ejecutable (.exe)
+  4. REINICIA tu computadora
+  5. Abre una terminal nueva
+  6. Escribe: dotnet --version
+  7. Si ves un número de versión, está instalado
+
+
+PROBLEMA 2: "No se encuentra ServicioCierreCasos.csproj"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Qué significa:
+  → Estás en la carpeta incorrecta
+
+Solución:
+  1. Abre Explorador de Archivos (WIN + E)
+  2. Navega a: C:\ApostillaCcaycedo\ServicioCierreCasos
+  3. Verifica que veas:
+     - ServicioCierreCasos.csproj
+     - Program.cs
+     - ejecutar.bat
+  4. Desde aquí ejecuta los scripts
+
+
+PROBLEMA 3: "No se pudieron restaurar las dependencias"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Qué significa:
+  → Problemas de internet o conexión a nuget.org
+
+Solución:
+  1. Verifica tu conexión a internet
+  2. Si hay proxy/firewall, configúralo
+  3. Intenta de nuevo
+  4. Si sigue fallando:
+     - Abre línea de comandos
+     - Escribe: dotnet restore --no-cache
+
+
+PROBLEMA 4: Errores de compilación (ej: "CS1234: ERROR")
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Qué significa:
+  → Hay un error en el código fuente
+
+Solución:
+  1. Ejecuta: ejecutar-debug.bat (mostrará más detalles)
+  2. Lee el error mostrado
+  3. Busca el archivo y línea mencionada
+  4. Verifica si hay errores de sintaxis
+  5. Corrige el código
+
+
+PROBLEMA 5: "No se puede conectar a la base de datos"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Qué significa:
+  → La configuración de base de datos es incorrecta
+
+Solución:
+  1. Abre: appsettings.json
+  2. Busca la sección "ConnectionStrings"
+  3. Verifica que la ConnectionString sea correcta:
+     - Server: Tu servidor SQL Server
+     - Database: Tu nombre de base de datos
+     - User Id: Tu usuario
+     - Password: Tu contraseña
+  4. Verifica que SQL Server esté ejecutándose
+  5. Prueba la conexión desde SQL Server Management Studio
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ PARTE 7: PRÓXIMOS PASOS                                                   │
+└────────────────────────────────────────────────────────────────────────────┘
+
+Después de ejecutar exitosamente:
+
+1️⃣  Revisa los LOGS en la consola
+    → Verifica si el programa hizo lo que esperabas
+
+2️⃣  Si necesitas HACER CAMBIOS:
+    → Modifica el código
+    → Ejecuta ejecutar-rapido.bat nuevamente
+
+3️⃣  Para DEPURACIÓN MÁS PROFUNDA:
+    → Abre el proyecto en Visual Studio Code o Visual Studio
+    → Establece breakpoints
+    → Usa el debugger integrado
+
+4️⃣  Para AUTOMATIZAR:
+    → Personaliza los scripts según tus necesidades
+    → Úsalos en tareas programadas de Windows
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                           ¡LISTO!                                          ║
+║                                                                            ║
+║ Ahora puedes ejecutar tu programa fácilmente desde la línea de comandos   ║
+║                                                                            ║
+║ Script recomendado: ejecutar.bat                                           ║
+║ Ubicación: C:\ApostillaCcaycedo\ServicioCierreCasos\ejecutar.bat          ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝

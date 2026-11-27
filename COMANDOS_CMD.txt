@@ -1,0 +1,219 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                     COMANDOS PARA EJECUTAR EN CMD                         ║
+║            Servicio de Cierre de Casos - Línea de Comandos                ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ OPCIÓN 1: USAR EL SCRIPT BAT COMPLETO (RECOMENDADO)                       │
+└────────────────────────────────────────────────────────────────────────────┘
+
+Abre CMD y escribe:
+
+    cd C:\ApostillaCcaycedo\ServicioCierreCasos
+    ejecutar.bat
+
+O simplemente:
+
+    C:\ApostillaCcaycedo\ServicioCierreCasos\ejecutar.bat
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ OPCIÓN 2: COMPILAR Y EJECUTAR (Alternativa manual)                        │
+└────────────────────────────────────────────────────────────────────────────┘
+
+Paso 1 - Ir a la carpeta del proyecto:
+    cd C:\ApostillaCcaycedo\ServicioCierreCasos
+
+Paso 2 - Compilar:
+    dotnet build ServicioCierreCasos.csproj --configuration Debug
+
+Paso 3 - Ejecutar:
+    dotnet bin\Debug\net10.0\ServicioCierreCasos.dll
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ OPCIÓN 3: SOLO COMPILAR                                                   │
+└────────────────────────────────────────────────────────────────────────────┘
+
+    cd C:\ApostillaCcaycedo\ServicioCierreCasos
+    dotnet build ServicioCierreCasos.csproj --configuration Debug
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ OPCIÓN 4: SOLO EJECUTAR (ya compilado)                                    │
+└────────────────────────────────────────────────────────────────────────────┘
+
+    cd C:\ApostillaCcaycedo\ServicioCierreCasos
+    dotnet bin\Debug\net10.0\ServicioCierreCasos.dll
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ OPCIÓN 5: COMPILAR Y EJECUTAR EN UNA LÍNEA                                │
+└────────────────────────────────────────────────────────────────────────────┘
+
+    cd C:\ApostillaCcaycedo\ServicioCierreCasos && dotnet build --configuration Debug && dotnet bin\Debug\net10.0\ServicioCierreCasos.dll
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ OPCIÓN 6: VERSIÓN RELEASE (Producción)                                    │
+└────────────────────────────────────────────────────────────────────────────┘
+
+    cd C:\ApostillaCcaycedo\ServicioCierreCasos
+    dotnet build ServicioCierreCasos.csproj --configuration Release
+    dotnet bin\Release\net10.0\ServicioCierreCasos.dll
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ OPCIÓN 7: LIMPIAR Y RECOMPILAR                                            │
+└────────────────────────────────────────────────────────────────────────────┘
+
+    cd C:\ApostillaCcaycedo\ServicioCierreCasos
+    dotnet clean
+    dotnet build ServicioCierreCasos.csproj --configuration Debug
+    dotnet bin\Debug\net10.0\ServicioCierreCasos.dll
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ OPCIÓN 8: RESTAURAR DEPENDENCIAS SOLAMENTE                                │
+└────────────────────────────────────────────────────────────────────────────┘
+
+    cd C:\ApostillaCcaycedo\ServicioCierreCasos
+    dotnet restore
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ OPCIÓN 9: VER INFORMACIÓN DEL PROYECTO                                    │
+└────────────────────────────────────────────────────────────────────────────┘
+
+    cd C:\ApostillaCcaycedo\ServicioCierreCasos
+    dotnet info
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ OPCIÓN 10: VER VERSIÓN DE .NET                                            │
+└────────────────────────────────────────────────────────────────────────────┘
+
+    dotnet --version
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ OPCIÓN 11: COMPILAR CON VERBOSIDAD (Depuración detallada)                 │
+└────────────────────────────────────────────────────────────────────────────┘
+
+    cd C:\ApostillaCcaycedo\ServicioCierreCasos
+    dotnet build ServicioCierreCasos.csproj --configuration Debug -v diagnostic
+
+
+┌────────────────────────────────────────────────────────────────────────────┐
+│ OPCIÓN 12: COMPILAR SIN RESTAURAR (Si ya restauraste)                     │
+└────────────────────────────────────────────────────────────────────────────┘
+
+    cd C:\ApostillaCcaycedo\ServicioCierreCasos
+    dotnet build ServicioCierreCasos.csproj --configuration Debug --no-restore
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                           INICIO RÁPIDO                                    ║
+║                                                                            ║
+║  Copia y pega esto en CMD:                                                 ║
+║                                                                            ║
+║    cd C:\ApostillaCcaycedo\ServicioCierreCasos && ejecutar.bat            ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+EXPLICACIÓN DE LOS COMANDOS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+cd C:\ApostillaCcaycedo\ServicioCierreCasos
+  → Cambia al directorio del proyecto
+
+ejecutar.bat
+  → Ejecuta el script de depuración completo
+
+dotnet build
+  → Compila el proyecto
+
+dotnet restore
+  → Restaura las dependencias NuGet
+
+dotnet clean
+  → Limpia artefactos compilados anteriormente
+
+--configuration Debug
+  → Compilación en modo depuración (con símbolos de debug)
+
+--configuration Release
+  → Compilación en modo producción (optimizada)
+
+-v diagnostic
+  → Verbosidad máxima para diagnósticos
+
+--no-restore
+  → Compila sin restaurar dependencias
+
+dotnet bin\Debug\net10.0\ServicioCierreCasos.dll
+  → Ejecuta el programa compilado
+
+&&
+  → Ejecuta el siguiente comando si el anterior fue exitoso
+
+
+RECOMENDACIONES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ PRIMERA VEZ:
+  cd C:\ApostillaCcaycedo\ServicioCierreCasos
+  ejecutar.bat
+
+✓ DESPUÉS DE CAMBIOS EN CÓDIGO:
+  cd C:\ApostillaCcaycedo\ServicioCierreCasos
+  ejecutar-rapido.bat
+
+✓ SOLO PRUEBA RÁPIDA:
+  cd C:\ApostillaCcaycedo\ServicioCierreCasos
+  ejecutar-directo.bat
+
+✓ PARA DIAGNÓSTICOS:
+  cd C:\ApostillaCcaycedo\ServicioCierreCasos
+  ejecutar-debug.bat
+
+
+PASOS DETALLADOS PARA CMD:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Abre CMD (WIN + R, escribe "cmd", ENTER)
+
+2. Escribe:
+   cd C:\ApostillaCcaycedo\ServicioCierreCasos
+
+3. Presiona ENTER
+
+4. Escribe:
+   ejecutar.bat
+
+5. Presiona ENTER
+
+¡Listo! El script se ejecutará mostrando cada paso.
+
+
+CÓMO VERIFICAR SI FUNCIONA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Después de ejecutar, deberías ver algo como:
+
+   ╔═══════════════════════════════════╗
+   ║ EJECUTAR SERVICIO CIERRE DE CASOS ║
+   ╚═══════════════════════════════════╝
+
+   [PASO 1] VALIDANDO ENTORNO
+   ✓ Proyecto encontrado
+   
+   [PASO 2] VERIFICANDO .NET SDK
+   ✓ .NET SDK encontrado: 10.0.0
+   
+   ... más pasos ...
+
+Si ves ✓ (checkmarks), está funcionando correctamente.
+Si ves ✗ (cruces), hay un problema (lee el mensaje de error).

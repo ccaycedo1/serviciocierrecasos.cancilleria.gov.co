@@ -1,0 +1,30 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                     EJECUTAR PROGRAMA - COMANDO RÁPIDO                     ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+OPCIÓN A - LA MÁS RÁPIDA (Una sola línea):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Copia y pega en CMD:
+
+cd C:\ApostillaCcaycedo\ServicioCierreCasos && ejecutar.bat
+
+
+OPCIÓN B - LA MÁS MANUAL (Paso a paso):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. cd C:\ApostillaCcaycedo\ServicioCierreCasos
+2. dotnet build ServicioCierreCasos.csproj --configuration Debug
+3. dotnet bin\Debug\net10.0\ServicioCierreCasos.dll
+
+
+OPCIÓN C - SIN COMPILAR (Ya está compilado):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+cd C:\ApostillaCcaycedo\ServicioCierreCasos && dotnet bin\Debug\net10.0\ServicioCierreCasos.dll
+
+
+════════════════════════════════════════════════════════════════════════════
+Recomendación: Usa la OPCIÓN A
+════════════════════════════════════════════════════════════════════════════

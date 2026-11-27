@@ -1,0 +1,223 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                 🚀 COMANDO PARA EJECUTAR EN CMD                           ║
+║                                                                            ║
+║              Servicio de Cierre de Casos - Fácil y Rápido                 ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                            ┃
+┃                   📋 COPIAR Y PEGAR EN CMD                                ┃
+┃                                                                            ┃
+┃  cd C:\ApostillaCcaycedo\ServicioCierreCasos && ejecutar.bat             ┃
+┃                                                                            ┃
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+
+
+INSTRUCCIONES PASO A PASO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  ABRE CMD
+    • Presiona: WIN + R
+    • Escribe: cmd
+    • Presiona: ENTER
+
+2️⃣  COPIA EL COMANDO
+    Desde esta línea (selecciona todo):
+    cd C:\ApostillaCcaycedo\ServicioCierreCasos && ejecutar.bat
+
+3️⃣  PEGA EN CMD
+    • Clic derecho en la ventana de CMD
+    • Selecciona "Pegar"
+    O simplemente: CTRL + V
+
+4️⃣  PRESIONA ENTER
+    • Escribe ENTER
+
+5️⃣  OBSERVA LA EJECUCIÓN
+    El programa mostrará:
+    ✓ Validación del entorno
+    ✓ Verificación de .NET SDK
+    ✓ Restauración de dependencias
+    ✓ Compilación del proyecto
+    ✓ Verificación de configuración
+    ✓ Información del entorno
+    ✓ Parámetros de ejecución
+    ✓ Ejecución del programa
+    ✓ Resultados finales
+
+
+QUÉ VERÁS EN PANTALLA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+╔══════════════════════════════════════════════════════════════════╗
+║   EJECUTAR SERVICIO CIERRE DE CASOS                             ║
+║   Script de Depuración - Versión 1.0                            ║
+╚══════════════════════════════════════════════════════════════════╝
+
+[PASO 1] VALIDANDO ENTORNO
+───────────────────────────────────────────────────────────────────
+  ✓ Directorio del script: C:\ApostillaCcaycedo\ServicioCierreCasos\
+  ✓ Proyecto encontrado: ServicioCierreCasos.csproj
+
+[PASO 2] VERIFICANDO .NET SDK
+───────────────────────────────────────────────────────────────────
+  ✓ .NET SDK encontrado: 10.0.0
+
+[PASO 3] PREPARANDO COMPILACIÓN
+───────────────────────────────────────────────────────────────────
+  Limpiando artefactos anteriores...
+  ✓ Limpieza completada
+
+[PASO 4] RESTAURANDO DEPENDENCIAS
+───────────────────────────────────────────────────────────────────
+  Restaurando paquetes NuGet...
+  ✓ Dependencias restauradas correctamente
+
+[PASO 5] COMPILANDO PROYECTO
+───────────────────────────────────────────────────────────────────
+  Compilando en modo Debug...
+  ✓ Compilación completada exitosamente
+
+[PASO 6] VERIFICANDO CONFIGURACIÓN
+───────────────────────────────────────────────────────────────────
+  ✓ Configuración por defecto encontrada: appsettings.json
+
+[PASO 7] INFORMACIÓN DEL ENTORNO
+───────────────────────────────────────────────────────────────────
+  Sistema Operativo: Microsoft Windows 10
+  Directorio de Trabajo: C:\ApostillaCcaycedo\ServicioCierreCasos
+  Versión .NET: 10.0.0
+
+[PASO 8] EJECUTANDO PROGRAMA
+───────────────────────────────────────────────────────────────────
+════════════════════════════════════════════════════════════════════
+   INICIANDO PROGRAMA
+════════════════════════════════════════════════════════════════════
+
+   ╔══════════════════════════════════════════════════════════════╗
+   ║   PROGRAMA DE DEPURACIÓN - ACTUALIZACIÓN DE ESTADOS DE PAGOS  ║
+   ║   Versión: 1.0                                              ║
+   ║   Fecha de Ejecución: 27/11/2024 09:39:03                   ║
+   ╚══════════════════════════════════════════════════════════════╝
+
+   📋 INFORMACIÓN DEL ENTORNO:
+     • Sistema Operativo: Microsoft Windows 10
+     • Versión .NET: .NET 10.0.0
+     • Directorio Actual: C:\ApostillaCcaycedo\ServicioCierreCasos
+
+   🔗 CONFIGURACIÓN DE CONEXIONES:
+     • Base de Datos Pagos: tu-servidor
+
+   ⚙️  PARÁMETROS DE EJECUCIÓN:
+     • Intervalo de Ejecución: 5 minutos
+     • Modo: Ejecución Única (Depuración)
+     • Reintento en Errores: Habilitado
+
+   🚀 INICIANDO EJECUCIÓN DEL JOB...
+   ⏱️  Iniciando job en: 27/11/2024 09:39:04.123
+   ✅ Job finalizado en: 27/11/2024 09:39:15.456
+
+════════════════════════════════════════════════════════════════════
+   PROGRAMA FINALIZADO
+════════════════════════════════════════════════════════════════════
+
+   ✓ El programa se ejecutó exitosamente
+   Código de salida: 0
+
+[PASO 9] OPCIONES ADICIONALES
+───────────────────────────────────────────────────────────────────
+
+   Opciones:
+   1) Volver a ejecutar
+   2) Ejecutar en modo Release
+   3) Ver logs del último build
+   4) Limpiar y compilar desde cero
+   5) Salir
+
+   Selecciona una opción (1-5): _
+
+
+SI ALGO FALLA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ ERROR: "dotnet: comando no encontrado"
+   → Instala .NET SDK desde: https://dotnet.microsoft.com/download
+   → Reinicia tu computadora
+
+❌ ERROR: "No se encuentra ServicioCierreCasos.csproj"
+   → Estás en la carpeta incorrecta
+   → Navega a: C:\ApostillaCcaycedo\ServicioCierreCasos
+
+❌ ERROR de base de datos
+   → Verifica appsettings.json
+   → Revisa tu ConnectionString
+   → Verifica que SQL Server esté disponible
+
+❌ Otros errores
+   → Lee el mensaje de error mostrado
+   → Busca la solución en: GUIA_EJECUCION.md
+
+
+ALTERNATIVAS (Si lo anterior no funciona):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Opción B (Dos líneas):
+  cd C:\ApostillaCcaycedo\ServicioCierreCasos
+  ejecutar.bat
+
+Opción C (Manual - Paso a paso):
+  cd C:\ApostillaCcaycedo\ServicioCierreCasos
+  dotnet build ServicioCierreCasos.csproj --configuration Debug
+  dotnet bin\Debug\net10.0\ServicioCierreCasos.dll
+
+Opción D (Ejecutar sin compilar - si ya está compilado):
+  cd C:\ApostillaCcaycedo\ServicioCierreCasos
+  ejecutar-directo.bat
+
+Opción E (Con máxima depuración):
+  cd C:\ApostillaCcaycedo\ServicioCierreCasos
+  ejecutar-debug.bat
+
+
+ARCHIVOS DE AYUDA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📄 COMANDO_EJECUTAR.txt ..................... Comandos más simples
+📄 COMANDOS_CMD.txt ......................... Todos los comandos disponibles
+📄 GUIA_EJECUCION.md ........................ Guía completa y detallada
+📄 INSTRUCCIONES_PASO_A_PASO.txt ........... Tutorial visual paso a paso
+📄 README_SCRIPTS.txt ....................... Resumen rápido
+
+
+NOTAS IMPORTANTES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ El script se ejecuta automaticamente desde cualquier ubicación
+  (siempre que lo ejecutes desde la carpeta C:\ApostillaCcaycedo\ServicioCierreCasos)
+
+✓ La primera ejecución tarda más (~20-30 segundos) porque:
+  - Restaura dependencias
+  - Compila el proyecto
+  - Ejecuta el programa
+
+✓ Las ejecuciones posteriores son más rápidas (~5-15 segundos)
+
+✓ El script valida que todo esté bien antes de ejecutar
+
+✓ Si hay un error, el script lo mostrará claramente
+
+✓ Puedes usar ejecutar-directo.bat si solo quieres ejecutar (sin compilar)
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                           ¡LISTO!                                          ║
+║                                                                            ║
+║  Ahora puedes ejecutar fácilmente tu programa desde CMD con depuración    ║
+║                                                                            ║
+║  Comando: cd C:\ApostillaCcaycedo\ServicioCierreCasos && ejecutar.bat    ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
