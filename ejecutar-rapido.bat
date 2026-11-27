@@ -14,3 +14,4 @@ if errorlevel 1 exit /b 1
 REM Ejecutar
 dotnet bin\Debug\net10.0\ServicioCierreCasos.dll
 
+exit
