@@ -1,0 +1,119 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                    ✅ SCRIPTS ACTUALIZADOS                                ║
+║                                                                            ║
+║          Todas las pausas han sido eliminadas                             ║
+║          Los programas se cierran automáticamente                         ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+🎯 COMANDO RÁPIDO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+cd C:\ApostillaCcaycedo\ServicioCierreCasos && ejecutar.bat
+
+
+INSTRUCCIONES (3 PASOS):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Abre CMD
+   Presiona: WIN + R
+   Escribe: cmd
+   Presiona: ENTER
+
+2. Pega el comando de arriba en CMD
+   Clic derecho → Pegar
+   O simplemente: CTRL + V
+
+3. Presiona ENTER
+
+¡Tu programa se ejecutará y se cerrará automáticamente!
+
+
+📋 ARCHIVOS ACTUALIZADOS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ ejecutar.bat
+  - Script completo con depuración paso a paso
+  - Validación automática del entorno
+  - Se cierra sin pausas
+
+✓ ejecutar-rapido.bat
+  - Compilación + ejecución rápida
+  - Se cierra sin pausas
+
+✓ ejecutar-directo.bat
+  - Solo ejecución (sin compilar)
+  - Se cierra sin pausas
+
+✓ ejecutar-debug.bat
+  - Máxima verbosidad para diagnósticos
+  - Se cierra sin pausas
+
+
+CAMBIOS PRINCIPALES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ ELIMINADAS todas las líneas "pause"
+✓ ELIMINADO el menú interactivo al final
+✓ Los programas se ejecutan directamente
+✓ Los programas se cierran automáticamente
+✓ Sin intervención del usuario
+✓ Perfecto para automatización
+
+
+ALTERNATIVAS DE EJECUCIÓN:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Opción 1 (Recomendada):
+  cd C:\ApostillaCcaycedo\ServicioCierreCasos && ejecutar.bat
+
+Opción 2 (Dos líneas):
+  cd C:\ApostillaCcaycedo\ServicioCierreCasos
+  ejecutar.bat
+
+Opción 3 (Rápida):
+  cd C:\ApostillaCcaycedo\ServicioCierreCasos && ejecutar-rapido.bat
+
+Opción 4 (Solo ejecución):
+  cd C:\ApostillaCcaycedo\ServicioCierreCasos && ejecutar-directo.bat
+
+Opción 5 (Con máxima depuración):
+  cd C:\ApostillaCcaycedo\ServicioCierreCasos && ejecutar-debug.bat
+
+
+¿QUÉ SUCEDE AL EJECUTAR?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Paso 1: Valida el entorno
+Paso 2: Verifica .NET SDK
+Paso 3: Limpia compilaciones anteriores
+Paso 4: Restaura dependencias
+Paso 5: Compila el proyecto
+Paso 6: Verifica configuración
+Paso 7: Muestra información del entorno
+Paso 8: Ejecuta tu programa
+     ↓
+   Fin: Se cierra automáticamente ✓
+
+
+VENTAJAS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Ejecución automática
+✓ Sin pausas ni esperas
+✓ Depuración visible paso a paso
+✓ Cierre automático
+✓ Fácil de integrar en tareas programadas
+✓ Captura de errores clara
+✓ Código de salida apropiado
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                    🚀 ¡LISTO PARA EJECUTAR!                               ║
+║                                                                            ║
+║          cd C:\ApostillaCcaycedo\ServicioCierreCasos && ejecutar.bat      ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
